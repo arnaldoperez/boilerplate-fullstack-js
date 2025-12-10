@@ -94,6 +94,10 @@ El proyecto está organizado de la siguiente manera para mantener una clara sepa
 *   `server/`: Todo el código del backend, incluyendo la lógica de la API, la configuración de la base de datos con Prisma y las rutas.
 *   `package.json` (raíz): Contiene los scripts para gestionar el proyecto completo, como instalar dependencias o ejecutar ambos entornos (cliente y servidor) simultáneamente.
 
+## Caso de ejemplo
+
+
+
 ## Scripts Disponibles
 
 Puedes usar los siguientes scripts desde la raíz del proyecto:
@@ -104,7 +108,7 @@ Puedes usar los siguientes scripts desde la raíz del proyecto:
 *   `npm run client`: Inicia únicamente la aplicación de React.
 *   `npm start`: Ejecuta el servidor en modo de producción. Este script generalmente se usa después de haber construido la aplicación de React.
 *   `npm run build`: Construye la aplicación de React para producción. Los archivos generados se colocan en la carpeta `./dist`.
-*   `npm run prisma:migrate:dev`: (Asumiendo el uso de Prisma) Crea y aplica una nueva migración en tu base de datos de desarrollo.
+*   `npx prisma migrate dev --name migration-name`: Crea y aplica una nueva migración en tu base de datos de desarrollo. Debes reemplazar *migration-name* por el nombre de la migración, similar a los mensajes del comit, deben reflejar el cambio que aplica dicha migración
 *   `npm run prisma:generate`: (Asumiendo el uso de Prisma) Genera o actualiza el Cliente de Prisma basado en tu esquema.
 *   `npm run prisma:seed`: Ejecuta el script diseñado para la carga masiva de datos en tu base de datos. El script se encuentra en `prisma/seed.js`
 
